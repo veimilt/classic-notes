@@ -163,7 +163,6 @@ dialog {
   filter: blur(10px);
   transition: all 0.25s allow-discrete;
   width: 100dvw;
-  height: 100dvh;
 }
 
 dialog:open {
@@ -207,6 +206,7 @@ dialog header {
 
 .dialog-content {
   padding: 1rem;
+  padding-bottom: 2rem;
 }
 
 .dialog-title {
@@ -235,8 +235,8 @@ dialog header {
 
 .dialog-actions {
   display: flex;
-  gap: 1rem;
-  justify-content: flex-end;
+  gap: 0.75rem;
+  justify-content: center;
 }
 
 .delete-btn {
@@ -269,10 +269,15 @@ dialog header {
   dialog {
     margin-top: auto;
     width: 90vw;
-    height: fit-content;
   }
 
   .dialog-content {
     padding: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .dialog-actions {
+    justify-content: flex-end;
+    gap: 1rem;
   }
 }

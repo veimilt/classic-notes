@@ -12,7 +12,7 @@ html {
 :root,
 html[data-theme="light"] {
   color-scheme: light;
-  --bg: rgb(221, 233, 236);
+  --bg: rgb(204, 216, 220);
   --text: rgba(0, 0, 0, 0.9);
   --text-reverse: rgba(255, 255, 255, 0.9);
   --text-subtle: rgba(0, 0, 0, 0.75);
@@ -22,17 +22,17 @@ html[data-theme="light"] {
   --bg-transparent: rgba(255, 255, 255, 0.85);
   --border: rgba(0, 0, 0, 0.5);
   --border-subtle: rgba(0, 0, 0, 0.25);
-  --card-border: #fafafa;
-  --bg-dialog: #fafafa;
-  --bg-card: #fafafa;
-  --bg-input: white;
+  --card-border: #f5f5f5;
+  --bg-dialog: #f5f5f5;
+  --bg-card: #f5f5f5;
+  --bg-input: rgb(239, 239, 239);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
 
-    --bg: Canvas;
+    --bg: rgb(31, 33, 35);
     --text: rgba(255, 255, 255, 0.9);
     --text-reverse: rgba(0, 0, 0, 0.9);
     --text-subtle: rgba(255, 255, 255, 0.75);
@@ -42,7 +42,7 @@ html[data-theme="light"] {
     --border-subtle: rgba(255, 255, 255, 0.125);
     --card-border: rgb(42, 42, 42);
     --bg-card: rgba(255, 255, 255, 0.1);
-    --bg-dialog: rgba(255, 255, 255, 0.1);
+    --bg-dialog: rgb(31, 33, 35);
     --bg-input: rgba(0, 0, 0, 0.1);
   }
 }
@@ -50,7 +50,7 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
   color-scheme: dark;
 
-  --bg: Canvas;
+  --bg: rgb(31, 33, 35);
   --text: rgba(255, 255, 255, 0.9);
   --text-reverse: rgba(0, 0, 0, 0.9);
   --text-subtle: rgba(255, 255, 255, 0.75);
@@ -60,7 +60,7 @@ html[data-theme="dark"] {
   --border-subtle: rgba(255, 255, 255, 0.125);
   --card-border: rgb(42, 42, 42);
   --bg-card: rgba(255, 255, 255, 0.1);
-  --bg-dialog: rgba(255, 255, 255, 0.1);
+  --bg-dialog: rgb(54, 57, 61);
   --bg-input: rgba(0, 0, 0, 0.1);
 }
 
@@ -96,7 +96,7 @@ header {
 main {
   display: grid;
   padding: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
@@ -258,5 +258,6 @@ dialog header {
 @media (min-width: 768px) {
   main {
     padding: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   }
 }

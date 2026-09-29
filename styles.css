@@ -77,6 +77,8 @@ button {
 
 button.close-dialog {
   background: none;
+  border: none;
+  padding-right: 0;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
@@ -124,7 +126,7 @@ header {
 
 main {
   display: grid;
-  padding: 1rem;
+  padding: 0.5rem;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
   max-width: 100rem;
@@ -174,7 +176,7 @@ main {
 dialog {
   margin: auto;
   inset: 0.5rem;
-  width: 90vw;
+  width: calc(100% - 1rem);
   max-width: 650px;
   border-radius: 20px;
   padding: 0.5rem;

@@ -37,7 +37,7 @@ html[data-theme="light"] {
     --border: rgba(255, 255, 255, 0.25);
     --border-subtle: rgba(255, 255, 255, 0.125);
     --bg-card: rgba(240, 248, 255, 0.1);
-    --bg-dialog: rgb(33, 37, 42);
+    --bg-dialog: rgba(220, 239, 255, 0.1);
     --bg-input: rgba(0, 0, 0, 0.1);
     --button-bg: rgba(240, 248, 255, 0.2);
   }
@@ -54,7 +54,7 @@ html[data-theme="dark"] {
   --border: rgba(255, 255, 255, 0.25);
   --border-subtle: rgba(255, 255, 255, 0.125);
   --bg-card: rgba(240, 248, 255, 0.1);
-  --bg-dialog: rgb(33, 37, 42);
+  --bg-dialog: rgba(220, 239, 255, 0.1);
   --bg-input: rgba(0, 0, 0, 0.1);
   --button-bg: rgba(240, 248, 255, 0.2);
 }
@@ -78,7 +78,12 @@ button {
 button.close-dialog {
   background: none;
   border: none;
-  padding-right: 0;
+  transform: translateX(1rem);
+}
+
+html[data-theme="dark"] .close-dialog {
+  background: none;
+  border: none;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
@@ -106,7 +111,6 @@ input,
 textarea {
   font: inherit;
   background-color: var(--bg-input);
-  border-radius: 4px;
 }
 
 header {
@@ -182,11 +186,12 @@ dialog {
   padding: 0.5rem;
   background: var(--bg-dialog);
   border: none;
-  box-shadow: 0px 4px 3rem -1rem rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 4px 3rem -1rem rgba(0, 0, 0, 0.25); */
   opacity: 0;
   transform: scale(0.75);
   filter: blur(10px);
   transition: all 0.25s allow-discrete;
+  backdrop-filter: blur(1000px);
 }
 
 dialog:open {
@@ -244,7 +249,6 @@ dialog header {
   padding: 0.75rem;
   font-size: 1rem;
   color: var(--text-color);
-  border: 2px solid var(--border);
 }
 
 .form-textarea {

@@ -37,7 +37,7 @@ html[data-theme="light"] {
     --border: rgba(255, 255, 255, 0.25);
     --border-subtle: rgba(255, 255, 255, 0.125);
     --bg-card: rgba(240, 248, 255, 0.1);
-    --bg-dialog: rgba(220, 239, 255, 0.1);
+    --bg-dialog: rgb(46, 51, 56);
     --bg-input: rgba(0, 0, 0, 0.1);
     --button-bg: rgba(240, 248, 255, 0.2);
   }
@@ -54,7 +54,7 @@ html[data-theme="dark"] {
   --border: rgba(255, 255, 255, 0.25);
   --border-subtle: rgba(255, 255, 255, 0.125);
   --bg-card: rgba(240, 248, 255, 0.1);
-  --bg-dialog: rgba(220, 239, 255, 0.1);
+  --bg-dialog: rgb(46, 51, 56);
   --bg-input: rgba(0, 0, 0, 0.1);
   --button-bg: rgba(240, 248, 255, 0.2);
 }
